@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AMST3">
-        <activity android:name=".RedSensores"></activity>
+        <activity android:name=".NewTemp"></activity>
+        <activity android:name=".RedSensores" />
         <activity android:name=".Menu" />
         <activity android:name=".MainActivity">
             <intent-filter>

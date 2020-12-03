@@ -23,4 +23,9 @@ public class Menu extends AppCompatActivity {
         red_sensores.putExtra("token", token);
         startActivity(red_sensores);
     }
+    public void newTemp(View v){
+        Intent red_sensores = new Intent(getBaseContext(), NewTemp.class);
+        red_sensores.putExtra("token", token);
+        startActivity(red_sensores);
+    }
 }
