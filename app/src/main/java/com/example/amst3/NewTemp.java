@@ -55,9 +55,9 @@ public class NewTemp extends AppCompatActivity {
         params.put("username", username);
         params.put("password", password);
         params.put("temperatura", temperatura);
-        params.put("token", token);
+
         JSONObject parametros = new JSONObject(params);
-        String login_url = "https://amst-labx.herokuapp.com/api/sensores/1";
+        String login_url = "https://amst-labx.herokuapp.com/api/sensores";
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.POST, login_url, parametros,
                 new Response.Listener<JSONObject>() {
@@ -78,7 +78,7 @@ public class NewTemp extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 AlertDialog alertDialog = new AlertDialog.Builder(NewTemp.this).create();
                 alertDialog.setTitle("Alerta");
-                alertDialog.setMessage("Credenciales Incorrectas");
+                alertDialog.setMessage("No se pudo cambiar la temperatura");
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
