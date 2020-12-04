@@ -2,22 +2,18 @@ package com.example.amst3;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,12 +36,9 @@ public class NewTemp extends AppCompatActivity {
         token = (String)login.getExtras().get("token");
         username = (String)login.getExtras().get("username");
         password = (String)login.getExtras().get("password");
-
         edtTemp=(EditText) findViewById(R.id.edtTemp);
 
     }
-
-
 
     public void nuevaTemp(View v){
 
@@ -57,7 +50,7 @@ public class NewTemp extends AppCompatActivity {
         params.put("temperatura", temperatura);
 
         JSONObject parametros = new JSONObject(params);
-        String login_url = "https://amst-labx.herokuapp.com/api/sensores";
+        String login_url = "https://amst-labx.herokuapp.com/db/nuevo-jwt";
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.POST, login_url, parametros,
                 new Response.Listener<JSONObject>() {
