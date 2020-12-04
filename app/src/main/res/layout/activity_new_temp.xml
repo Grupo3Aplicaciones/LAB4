@@ -17,10 +17,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        android:onClick="nuevaTemp"
+        app:layout_constraintTop_toBottomOf="@+id/edtTemp" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edtTemp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -39,7 +40,8 @@
         android:layout_marginTop="80dp"
         android:text="Nueva Temperatura"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+
+        app:layout_constraintBottom_toTopOf="@+id/edtTemp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                             token = response.getString("token");
                             Intent menuPrincipal = new Intent(getBaseContext(), Menu.class);
                             menuPrincipal.putExtra("token", token);
+                            menuPrincipal.putExtra("username", usuario);
+                            menuPrincipal.putExtra("password", password);
                             startActivity(menuPrincipal);
                         } catch (Exception e) {
                             e.printStackTrace();
